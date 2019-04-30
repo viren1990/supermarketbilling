@@ -1,0 +1,49 @@
+{
+  "user": {
+    "uid": "anishkumar@in.com"
+  },
+  "orderEntries": [
+    {
+      "product": {
+        "code": "Apple"
+      },
+      "quantity": 6,
+      "entry": 1
+    },
+    {
+      "product": {
+        "code": "Orange"
+      },
+      "quantity": 2,
+      "entry": 2
+    },
+    {
+      "product": {
+        "code": "Potato"
+      },
+      "quantity": 14,
+      "entry": 3
+    },
+    {
+      "product": {
+        "code": "Tomato"
+      },
+      "quantity": 3,
+      "entry": 4
+    },
+    {
+      "product": {
+        "code": "Cow Milk"
+      },
+      "quantity": 8,
+      "entry": 5
+    },
+    {
+      "product": {
+        "code": "Gouda"
+      },
+      "quantity": 2,
+      "entry": 6
+    }
+  ]
+}

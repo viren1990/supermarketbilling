@@ -1,0 +1,122 @@
+{
+	"info": {
+		"_postman_id": "69468a9d-ac85-4d6b-83b4-92b101da86ab",
+		"name": "shopping",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "shopping-searchAllProducts",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/products/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"products",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "shopping-order-submit",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"user\": {\n    \"uid\": \"anishkumar@in.com\"\n  },\n  \"orderEntries\": [\n    {\n      \"product\": {\n        \"code\": \"Apple\"\n      },\n      \"quantity\": 6,\n      \"entry\": 1\n    },\n    {\n      \"product\": {\n        \"code\": \"Orange\"\n      },\n      \"quantity\": 2,\n      \"entry\": 2\n    },\n    {\n      \"product\": {\n        \"code\": \"Potato\"\n      },\n      \"quantity\": 14,\n      \"entry\": 3\n    },\n    {\n      \"product\": {\n        \"code\": \"Tomato\"\n      },\n      \"quantity\": 3,\n      \"entry\": 4\n    },\n    {\n      \"product\": {\n        \"code\": \"Cow Milk\"\n      },\n      \"quantity\": 8,\n      \"entry\": 5\n    },\n    {\n      \"product\": {\n        \"code\": \"Gouda\"\n      },\n      \"quantity\": 2,\n      \"entry\": 6\n    }\n  ]\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/orders/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"orders",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "shopping-search-customer-by-uid",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "\n\n"
+				},
+				"url": {
+					"raw": "http://localhost:8080/customers/search/findByUid?customer=anishkumar@in.com",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"customers",
+						"search",
+						"findByUid"
+					],
+					"query": [
+						{
+							"key": "customer",
+							"value": "anishkumar@in.com"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
